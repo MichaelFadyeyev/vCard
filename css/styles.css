@@ -152,7 +152,7 @@ font-weight: 200;
 	border: solid 2px white;
 	border-radius: 20px;
 	background-color:aqua;
-	background-image: url(/img/profile_foto_LR.jpg);
+	background-image: url(../img/profile_foto_LR.jpg);
     background-size:cover;
 	background-position: top;
 }
@@ -290,7 +290,6 @@ font-weight: 200;
 /* global variables */
 :root{
     --color-b: #0b5394;
-
 	--prof-img-size: 180px;
 	--nav-width: calc(var(--prof-img-size) + 10%);
 	--disp-x: calc((100vw - 600px) / 2 + var(--prof-img-size) - 0.75rem);
