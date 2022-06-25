@@ -16,7 +16,7 @@
     <head>
         <section class="heading__wrapper">
             <div class="heading">
-                <nav class="heading__nav">
+                <nav class="heading__profile-menu">
                     <div class="heading__profile">
                         <div class="heading__image"></div>
                     </div>
@@ -59,7 +59,7 @@
                 <p>IT Step Academy Kyiv</p>
             </div>
             <div class="content__item">
-                <h3 class="content__title">skills</h3>
+                <h3 class="content__title" id="skills">skills</h3>
                 <div class="content__skills">
                     <div class="content__skill-item"><img src="img/adonet_icon.svg" alt=""><p>ADO.Net</p></div>
                     <div class="content__skill-item"><img src="img/asp_icon.svg" alt=""><p>ASP.Net</p></div>
@@ -69,20 +69,71 @@
                     <div class="content__skill-item"><img src="img/react_icon.svg" alt=""><p>React</p></div>
                 </div>
             </div>
-            <div class="content__item">
+            <div class="content__item" id="soft__skils">
+                <h3 class="content__title">soft skills</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit blanditiis voluptate perferendis. Possimus repellendus eius voluptas cupiditate placeat culpa at aut nihil dicta quasi! Beatae aperiam totam nobis impedit aut?</p>
+            </div>
+            <div class="content__item" id="portfolio">
                 <h3 class="content__title">portfolio</h3>
                 <div class="portolio__list">
                     <a href="https://mich-fa-adminpanel.netlify.app/index.html" target="_blank">
                         <strong>Admin Panel</strong>HTML + CSS + Adaptive
                     </a>
                     <a href="#l" target="_blank">
-                        <strong>Tourismo</strong>HTML + CSS + Adaptive
+                        <strong>Tourismo</strong>HTML + CSS + Bootstrap
                     </a>
                 </div>            
             </div>
+            <form class="content__item form" action="#" method="post" enctype="multipart/form-data">
+                <h3>Contact form</h3>
+                <div class="form__filds-wrapper">
+                    <div class="form__item">
+                        <p>Name</p>
+                        <input class="form__item-control input" tabindex="1" name="username" type="text" />
+                    </div>
+                    <div class="form__item">
+                        <p>Phone</p>
+                        <input class="form__item-control input" tabindex="2" name="userphone" type="tel" />
+                    </div>
+                    <div class="form__item">
+                        <p>Email</p>
+                        <input class="form__item-control input" tabindex="3" name="useremail" type="email" />
+                    </div>
+                    <div class="form__item">
+                        <p>Option</p>
+                        <select  class="form__item-control select" tabindex="4" name="option">
+                            <option value="option-1" selected="true">Option-1</option>
+                            <option value="option-2">Option-2</option>
+                            <option value="option-3">Option-3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <p>Additional info</p>
+                    <textarea class="form__item-control" tabindex="5" name="text"></textarea>
+                </div>
+                <div class="form__item">
+                    <p>Attach a file</p>
+                    <label for="file_1" class="file__button"><p>Choose File</p></label>
+                    <input class="form__item-control" tabindex="6" type="file" id="file_1"/>
+                </div>
+                <div class="form__item checkbox-buttons">
+                    <div class="form__item-checkbox">
+                        <label class="checkbox-wrapper" for="checkbox_1">
+                            <input class="checkbox" type="checkbox" id="checkbox_1" tabindex="7"/>                   
+                            <div class="checkbox__image"></div>
+                            <span class="checkbox__description">Agree with terms</span>
+                        </label>
+                    </div>
+                    <div class="form__item-buttons">
+                        <button class="button" tabindex="8" type="submit">Submit</button>
+                        <button class="button" tabindex="9" type="reset">Clear</button>
+                    </div> 
+                </div>
+            </form>
         </section>
     </main>
     <footer class="footer">
-        <div>2022</div>
+        <div><p>Lviv 2022</p></div>
     </footer>
 </body>

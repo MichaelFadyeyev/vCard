@@ -3,7 +3,6 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
-	/* color: red; */
 }
 
 a{
@@ -56,7 +55,7 @@ main{
 font-weight: 200;
 }
 
-.heading__nav{
+.heading__profile-menu{
 	display:flex;
 }
 
@@ -182,22 +181,27 @@ font-weight: 200;
 	content:":"
 }
 
+.content__item{
+	text-align: center;
+}
+
 .content__skill-item{
-	height: 3rem;
+	height: auto;
 	display: flex;
+	flex-direction: column;
+	align-content: center;
+	margin: 1rem auto;
 }
 .content__skill-item p{
 	margin: auto;
-	margin-left: 0.5rem;
-	flex-grow: 1;
+	
 }
 
-
 .content__skill-item img{
-	position: inherit;
-	margin: auto 0;
+	margin: auto;
 	width: 2rem;
 	height: 2rem;
+	margin-bottom: 0.5rem;
 }
 
 .portolio__list a strong::after{
@@ -208,17 +212,136 @@ font-weight: 200;
 	display: inline-block;
 	line-height: 1.75rem;
 	background-image: url(../img/right_arrow_icon.svg);
-	background-position: 100%;
+	background-position: calc(100% - 0.5rem);
 	background-repeat: no-repeat;
 	background-size: contain;
 	margin-bottom: 0.5rem;
-	padding-right: 2.5rem;
-	transition: all 0.2s ease 0.2s;
+	margin-left: 3.5rem;
+	padding-right: 3.5rem;
+	transition: all 0.1s ease;
+}
+
+#soft__skils p{
+	text-align: justify;
+}
+
+.form__item{
+	padding: 0 12.5%;
+	margin-bottom: 1rem;
+}
+
+.form__item p{
+	text-align: left;
+}
+
+.form__item-control{
+	width: 100%;
+}
+
+.form__item textarea{
+	resize: none;
+    height: 7rem;
+}
+
+.form__item.checkbox-buttons{
+	margin-bottom: 0;
+}
+
+.input{
+	height: 1.75rem;
+}
+
+.select{
+	height: 2rem;
+}
+
+.form__item-checkbox{
+	margin-bottom: 1rem;
+}
+
+.form__item-buttons{
+	margin-bottom: 1rem;
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox-wrapper {
+    cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkbox__description{
+ text-align: left;
+}
+
+.checkbox:checked + .checkbox__description{
+    color:#0ff81a;
+}
+
+.checkbox__image{
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../img/checkbox_icon.svg);
+    border-radius: 5px;
+    background-position: center;
+    background-size:contain;
+}
+
+.checkbox:checked + .checkbox__image{
+    margin: 0;
+    background-image: url(../img/checkbox_checked_icon.svg);
+    background-color: rgb(255, 193, 101);
 }
 
 
-.portolio__list a:hover{
-	padding-right: 3rem;	
+.button{
+	height: 2rem;
+	width: 5rem;
+}
+
+.file__button{
+	width: 6rem;
+	height: auto;
+	display: block;
+}
+
+.button,
+.file__button{
+	background-color: buttonface;
+	border: solid 1px grey;
+	border-radius: 6px;
+	font-size: 0.8333rem;
+	transition: all 0.1s ease;
+}
+
+.file__button>p{
+	line-height: 2rem;
+	text-align: center;
+}
+
+.button:hover,
+.file__button:hover{
+	background-color: rgb(230, 230, 230);
+	filter: drop-shadow(1px 1px 5px rgb(180, 205, 230));
+}
+
+.button:active,
+.file__button:active{
+	transform: translateY(1px);
+	filter: drop-shadow(1px 1px 3px rgb(180, 205, 230));
+}
+
+
+#file_1{
+	position: relative;
+	top: -30px;
+	left: 10px;
+	z-index: -1;
 }
 
 .footer{
@@ -226,17 +349,18 @@ font-weight: 200;
 	color: white;
 	font-weight: 200;
 	background-color: var(--color-b);
-	height: 4rem;
+	height: auto;
 }
 
 .footer div{
-	margin: auto;
+	margin: 1rem auto;
+
 }
 
 /* media */
 @media(max-width: 380px){
 
-.heading__nav{
+.heading__profile-menu{
 	display: flex;
 	flex-direction: column;
 }
@@ -252,12 +376,16 @@ font-weight: 200;
 	.portolio__list a{
 		display: inline-flex;
 		flex-direction: column;
-		background-position: right 1.75rem;
+		margin-left: 0;
+		padding: 0 0 1.4rem;
+		background-position: center bottom;
 		background-size: 12%;
+		
 	}
 
-
-
+	.portolio__list a:hover{
+		background-position: calc(50% + 0.5rem) bottom;	
+	}
 } 
 
 
@@ -266,6 +394,20 @@ font-weight: 200;
 	.content__skills {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.portolio__list a:hover{
+		background-position: 100%;
+	}
+
+	#portfolio{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 450px;
+	}
+
+	.portolio__list a{
+		min-width: 310px;
 	}
 } 
 
@@ -311,6 +453,24 @@ font-weight: 200;
 
 		width: 60%;	
 		max-width: 800px;	
+	}
+	.form__item-checkbox{
+		float: left;
+	}
+	
+	.form__item-buttons{
+		float: right;
+	}
+
+	.form__filds-wrapper{
+		padding: 0 12.5%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1rem;
+	}
+
+	.form__filds-wrapper div{
+		padding: 0;
 	}
 }
 
